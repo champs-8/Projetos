@@ -63,6 +63,7 @@ header {
 }
 .box .bottom {
     height: 5em;
+    width: 20em;
     align-items: center;
     justify-content: center;
     padding: .2em;
@@ -70,8 +71,43 @@ header {
     flex-direction: column;
 }
 .bottom #txturl {
-
+    width: 100%;
+    margin-left: 10px;
 }
 .bottom-a {
     padding: .5em;
+    width: 100%;
+}
+.bottom-a:nth-child(2) {
+    padding: .5em 0;
+    justify-content: space-evenly;
+}
+.radio input[type=radio] {
+    margin-left: 3px;
+}.radio label {
+    margin-left: 10px;
+}
+
+/* ================== */
+.result {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 5em;
+}
+.result .btnDown {
+    padding: .5em 1em;
+    height: min-content;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+footer {
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+}
+footer span {
+    font-size: .8em;
+    color: #c0c0c0
 }

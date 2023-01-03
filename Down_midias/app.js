@@ -1,9 +1,9 @@
 //npm i express
-const express = require("express");
+import { express } from "express";
 //npm i fs
 const fs = require("fs");
 //npm i ytdl-core
-const ytdl = require('ytdl-core')
+const ytdl = require('ytdl-core');
 //instanciando a funcão express
 const app = express();
 //porta do servidor
@@ -18,7 +18,7 @@ app.use(cors());
 app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
     //nao sei porquê funcionou, mas carregou o css
-    app.use('/Down_midias/public', express.static('public'));
+    app.use('/public', express.static('public'));
     
     //exemplo
 
@@ -29,11 +29,18 @@ app.get("/", (req, res) => {
 
     // res.header('Content-Disposition', `attachmentt; filename=Video${date}.mp4`)
     // return ytdl(url, { filter: "videoandaudio"}).pipe(res);    
-    ytdl('https://www.youtube.com/shorts/LioK54DvSjo', {filter: "videoandaudio"}).pipe(fs.createWriteStream('Video.mp4'));
 });
-
-
+app.get('/script.js', (req, res) => {
+    res.sendFile(`${__dirname}/script.js`);
+    console.log('carregou o script');
+})
+app.get('/app.js', (req, res) => {
+    res.sendFile(`${__dirname}/app.js`);
+    console.log('carregou o app');
+})
 
 //iniciando o servidor 
 app.listen(port, () => console.log(`*************\n\nhttp://localhost:${port}\n\n*************`));
+
+// parte configuravel da API
 

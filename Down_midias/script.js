@@ -1,3 +1,4 @@
+
 let radioCheck;
 
 //saber qual formato foi selectionado
@@ -12,9 +13,10 @@ function check(id) {
         /*aqui vou fazer a incrementação dos formatos*/
     }
     return radioCheck = id
-} 
+};
 
 function down() {
+    
     const areaurl = document.getElementById('txturl');
     
     if (!areaurl.value) {
@@ -22,11 +24,6 @@ function down() {
     }
     let url = areaurl.value
     console.log(url);
-    return url;
-}
-
-exports = {down}
-
-
-
+    
+};
 

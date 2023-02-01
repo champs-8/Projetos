@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
     <title>Password Generator</title>
 </head>
 <body>
@@ -12,7 +15,8 @@
         <h3>Password Generator</h3>
         <div class="content flex">
             <div class="password flex" id="password">
-                a
+                <input type="text" name="textRandom" id="textRandom"> 
+                <button id="copy">Copy</button>
             </div>
             <div class="inputs flex">
                 <div class="length">
@@ -36,12 +40,12 @@
                 <div class="segurity">
 
                 </div>
-                <button id="generate">GENERATE</button>
+                <button id="generate" onclick="generate()">GENERATE</button>
             </div>
         </div>
     </div>
-    <footer>
-        Create By <a href="#"> Fábio Santos </a> &nbsp;|| ÇHÄMP$ <br>2023
+    <footer class="flex">
+        Create By <a href="#">&nbsp; Fábio Santos </a> &nbsp;|| ÇHÄMP$ &#9415; 2023
     </footer>
     <script src="script.js"></script>
 </body>

@@ -3,7 +3,7 @@
     margin: 0;
 }
 body{
-    background-image: url('midia/bgf2.jpg');
+    background-image: url('midia/bgf.jpg');
     background-size: cover;
     display:flex;
     justify-content: center;
